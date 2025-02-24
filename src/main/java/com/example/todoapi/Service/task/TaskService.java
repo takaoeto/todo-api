@@ -16,7 +16,7 @@ public class TaskService {
     public TaskEntity find(long taskId) {
         return taskRepository.select(taskId)
             .map(record -> new TaskEntity(record.getId(), record.getTitle()))  //selectで取得したものをTaskEntityに変換する
-            .orElseThrow(() -> new TaskEitityNotFoundException(taskId)); //自作エラークラスに投げるている　TaskEitityNotFoundException(taskId)
+            .orElseThrow(() -> new TaskEntityNotFoundException(taskId)); //自作エラークラスに投げるている　TaskEntityNotFoundException(taskId)
     }
 
     public TaskEntity create(String title) {

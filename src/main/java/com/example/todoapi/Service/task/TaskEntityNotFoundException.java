@@ -1,10 +1,10 @@
 package com.example.todoapi.Service.task;
 
-public class TaskEitityNotFoundException extends RuntimeException {
+public class TaskEntityNotFoundException extends RuntimeException {
     
     private long taskId;
 
-    public TaskEitityNotFoundException(long taskId) {
+    public TaskEntityNotFoundException(long taskId) {
         super("TaskEntity (id = " + taskId + ") is not found.");
         this.taskId = taskId;
     }

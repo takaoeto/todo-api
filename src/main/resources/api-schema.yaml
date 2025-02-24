@@ -136,7 +136,7 @@ components:
       required:
         - title
         - detail
-        - invalid-params
+        - invalidParams
     InvalidParam:
       description: "不正なリクエストについての詳細"
       type: object
